@@ -7,8 +7,6 @@
 // Execute `rustlings hint tests8` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 fn main() {}
 
 #[cfg(test)]
@@ -17,6 +15,7 @@ mod tests {
 
     #[test]
     fn test_success() {
+        // `rustc-cfg=feature="xxx"`可以规定包的`feature`
         #[cfg(feature = "pass")]
         return;
 

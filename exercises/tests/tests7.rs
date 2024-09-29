@@ -34,8 +34,6 @@
 // Execute `rustlings hint tests7` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
 fn main() {}
 
 #[cfg(test)]
@@ -48,6 +46,7 @@ mod tests {
             .duration_since(std::time::UNIX_EPOCH)
             .unwrap()
             .as_secs();
+        // `build.rs`中在标准流中输出`rustc-env=ENVNAME=VALUE`可以配置编译参数
         let s = std::env::var("TEST_FOO").unwrap();
         let e: u64 = s.parse().unwrap();
         assert!(timestamp >= e && timestamp < e + 10);
